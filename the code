@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int decimalToBinary(int n){
+    int rem,ans=0,pow=1;
+    while(n>0){
+        rem = n%2;
+        ans += rem*pow;
+        pow*=10;
+        n=n/2;
+    }
+    return ans;
+}
+int main() {
+    int n;
+    cout << "Enter the number:\n";
+    cin >> n ;
+    cout << "The value of the decimal number in binary is: " << decimalToBinary(n) << endl;
+    return 0;
+
+}
